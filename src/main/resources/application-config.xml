@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	<context:component-scan base-package="com.sample.myapp.di"/>
+	<!-- 주석  -->
+	<!-- <bean id="helloService" class="com.sample.myapp.HelloService"></bean> -->
+	<!-- HelloService helloService= new HelloService(); -->
+	<!-- <bean id="helloController" class="com.sample.myapp.HelloController"> -->
+		<!-- <property name="helloService" ref="helloService"/> -->
+		 <!-- <constructor-arg ref="helloService"></constructor-arg> -->
+		<!-- HelloController helloController = new HelloController(helloService); -->
+		<!-- HelloService helloService= new HelloService();> -->
+		<!-- constructor-arg ref="helloService"></constructor-arg> -->
+	<!-- </bean> -->
+	<!-- 컬렉션 의존성 주입 -->
+	<!-- <bean id="personBean" class="com.sample.myapp.Person" scope="">
+		<property name="name" value="JinKyoung"/>
+		<property name="age" value="30"/>		
+	</bean>
+	<bean id="customer" class="com.sample.myapp.Customer">
+		<property name="lists">
+			<list>
+				<value>1</value>
+				<ref bean="personBean"/>
+				<bean class="com.sample.myapp.Person">
+					<property name="name" value="HyunJeong"/>
+					<property name="age" value="12"/>
+					
+				</bean>
+			</list>
+		</property>
+		<property name="sets">
+			<set>
+				<value>2</value>
+				<ref bean="personBean"/>
+				<bean class="com.sample.myapp.Person">
+					<property name="name" value="HyunJun"/>
+					<property name="age" value="11"/>
+					
+				</bean>
+			</set>
+		</property>		
+		<property name="maps">
+			<map>
+				<entry key="key1" value="3"/>
+				<entry key="key2" value-ref="personBean"/>
+				<entry key="key3">
+					<bean class="com.sample.myapp.Person">
+						<property name="name" value="HyunSoo"/>
+						<property name="age" value="8"/>
+					</bean>
+				</entry>
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="webmaster">webmaster@sample.com</prop>
+				<prop key="support">support@sample.com</prop>
+			</props>
+		
+		</property>
+	</bean> -->
+	
+</beans>

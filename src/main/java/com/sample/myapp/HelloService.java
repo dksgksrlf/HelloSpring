@@ -7,4 +7,8 @@ public class HelloService implements IHelloService{
 		String message = "Hello~~~"+name;
 		return message;
 	}
+	@Override
+	public String sayGoodbye(String name) {
+		return "goodbye~~~~"+name;
+	}
 }
